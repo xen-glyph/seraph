@@ -1,0 +1,29 @@
+————————————————————————————————————————————————————————————————————————————
+                          CAST BULLET ALLOY RECIPE                          
+————————————————————————————————————————————————————————————————————————————
+
+Recipe:     20:1 Lead/Tin
+Batch size: 21 lb
+Metric:     9525.44 g
+Imperial:   336 oz
+Prepared:   2026-08-07 20:26
+
+Exact calculated composition: Lead 95.238095%, Tin 4.761905%
+Parts ratio: 20 Lead : 1 Tin
+Common commercial label: 95% Pb / 5% Sn
+Approximate BHN: ~10 (reference only; actual hardness varies)
+Calculated as an exact 20 parts lead to 1 part tin ratio.
+
+COMPONENT                  PERCENT       PRIMARY      OUNCES         GRAMS
+------------------------  --------  ------------  ----------  ------------
+Lead                      95.2381%         20 lb      320 oz     9071.85 g
+Tin                        4.7619%          1 lb       16 oz      453.59 g
+------------------------  --------  ------------  ----------  ------------
+TOTAL                         100%         21 lb      336 oz     9525.44 g
+
+Formula: component weight = batch weight x percentage / 100
+
+Verify source-metal composition. Published BHN values are approximate and
+can vary with casting and heat history.
+
+————————————————————————————————————————————————————————————————————————————

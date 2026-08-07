@@ -1,0 +1,23 @@
+————————————————————————————————————————————————————————————————————————————
+                             BULLET LUBE RECIPE                             
+————————————————————————————————————————————————————————————————————————————
+
+Recipe:     Ol' Sawtooth Moose's Standard Bullet Lube
+Batch size: 2 lb
+Metric:     907.18 g
+Imperial:   32 oz
+Prepared:   2026-08-07 20:26
+
+COMPONENT                  PERCENT       PRIMARY      OUNCES         GRAMS
+------------------------  --------  ------------  ----------  ------------
+Beeswax                        60%        1.2 lb     19.2 oz      544.31 g
+Lard                           40%        0.8 lb     12.8 oz      362.87 g
+------------------------  --------  ------------  ----------  ------------
+TOTAL                         100%          2 lb       32 oz      907.18 g
+
+Formula: component weight = batch weight x percentage / 100
+
+Measure ingredients by weight. Actual performance depends on materials and
+application.
+
+————————————————————————————————————————————————————————————————————————————

@@ -1,0 +1,7 @@
+__pycache__/
+*.py[cod]
+*.txt
+!examples/*.txt
+.DS_Store
+.vscode/
+.idea/

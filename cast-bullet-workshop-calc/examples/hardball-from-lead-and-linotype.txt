@@ -1,0 +1,28 @@
+————————————————————————————————————————————————————————————————————————————
+                          SOURCE ALLOY BLEND PLAN                           
+————————————————————————————————————————————————————————————————————————————
+
+Recipe:     Hardball
+Batch size: 20 lb
+Metric:     9071.85 g
+Imperial:   320 oz
+Prepared:   2026-08-07 20:26
+
+Established 92/2/6 lead-tin-antimony target.
+Target: Pb 92%, Sn 2%, Sb 6%
+Calculated final: Pb 92%, Sn 2%, Sb 6%
+
+COMPONENT                  PERCENT       PRIMARY      OUNCES         GRAMS
+------------------------  --------  ------------  ----------  ------------
+Pure Lead                      50%         10 lb      160 oz     4535.92 g
+Linotype 84/4/12               50%         10 lb      160 oz     4535.92 g
+------------------------  --------  ------------  ----------  ------------
+TOTAL                         100%         20 lb      320 oz     9071.85 g
+
+Formula: source weights solve mass balance for total, tin, and antimony
+
+Source compositions are mathematical inputs. Verify each actual source alloy
+before blending.
+The plan assumes no selective metal loss and no unlisted elements.
+
+————————————————————————————————————————————————————————————————————————————
