@@ -94,7 +94,8 @@ hardness caveats.
 - Python 3.8 or newer
 - No third-party Python packages
 - A terminal
-- Optional printing: CUPS client commands `lp` and `lpstat`
+- Optional direct printing on Linux/macOS: CUPS client commands `lp` and `lpstat`
+- Windows: PowerShell for the supplied installer, or run the Python script directly
 
 Check Python:
 
@@ -114,7 +115,7 @@ Clone the Seraph repository and enter this project folder:
 
 ```bash
 git clone https://github.com/xen-glyph/seraph.git
-cd seraph/cast-bullet-workshop-calculator
+cd seraph/cast-bullet-workshop-calc
 ```
 
 Install for the current user:
@@ -183,23 +184,152 @@ python3 cast_bullet_workshop_calculator.py
 
 ## Windows installation
 
-From PowerShell in the project directory:
+The calculator supports Windows 10 and Windows 11 with Python 3.8 or newer.
+No third-party Python packages are required.
+
+### 1. Install Python
+
+Open PowerShell or Windows Terminal and check for Python:
+
+```powershell
+py --version
+```
+
+If that command reports Python 3.8 or newer, continue to the next step.
+
+If `py` is not recognized, install Python 3 from:
+
+```text
+https://www.python.org/downloads/windows/
+```
+
+During installation, enable the option to add Python to `PATH`. The standard
+Python launcher normally provides the `py` command used below.
+
+### 2. Get the project
+
+#### Option A: Download the repository ZIP
+
+1. Open `https://github.com/xen-glyph/seraph`.
+2. Select **Code**, then **Download ZIP**.
+3. Extract the downloaded archive.
+4. Open this folder:
+
+```text
+seraph-main\cast-bullet-workshop-calc
+```
+
+5. Right-click inside the folder and choose **Open in Terminal**, or open
+   PowerShell and use `cd` to enter the folder.
+
+#### Option B: Clone with Git
+
+If Git for Windows is installed:
+
+```powershell
+git clone https://github.com/xen-glyph/seraph.git
+cd seraph\cast-bullet-workshop-calc
+```
+
+### 3. Install for the current Windows user
+
+From PowerShell inside the project folder:
 
 ```powershell
 Set-ExecutionPolicy -Scope Process Bypass
 .\install.ps1
 ```
 
-Open a new terminal and run:
+`-Scope Process` changes the execution policy only for the current PowerShell
+window. It does not permanently alter the system-wide policy.
+
+Close that terminal, open a new PowerShell or Command Prompt window, and run:
 
 ```powershell
 cast-bullet-workshop
 ```
 
-The interactive calculator and text export work on Windows. The built-in print
-command specifically uses CUPS and is therefore intended for Linux/macOS; on
-Windows, export a text report and print it using the normal application or
-print workflow.
+The shorter launcher also works:
+
+```powershell
+cbwc
+```
+
+The Windows installer places the application under:
+
+```text
+%LOCALAPPDATA%\CastBulletWorkshopCalculator\bin
+```
+
+### Run on Windows without installing
+
+From the project folder:
+
+```powershell
+py .\cast_bullet_workshop_calculator.py
+```
+
+This runs the complete calculator without copying files or adding launcher
+commands to the user's `PATH`.
+
+### Windows text export and printing
+
+Calculation, saved recipes, alloy blending, and text-file export work normally
+on Windows.
+
+The application's direct `p) Print` function uses the CUPS `lp` command and is
+therefore intended for Linux and macOS. On Windows:
+
+1. Select `e) Export current report as a text file`.
+2. Open the exported `.txt` file in Notepad or another text editor.
+3. Use the application's normal **Print** command.
+
+Exported reports remain plain text, contain no terminal color codes, and are
+formatted to a maximum width of 76 columns.
+
+### Windows data location
+
+Saved recipes and settings are stored at:
+
+```text
+%LOCALAPPDATA%\CastBulletWorkshopCalculator\workshop.json
+```
+
+To display the exact path in use:
+
+```powershell
+cast-bullet-workshop --show-data-path
+```
+
+### Updating on Windows
+
+If the project was cloned with Git:
+
+```powershell
+cd path\to\seraph\cast-bullet-workshop-calc
+git pull
+Set-ExecutionPolicy -Scope Process Bypass
+.\install.ps1
+```
+
+If the repository was downloaded as a ZIP, download and extract the newer
+version, then run `install.ps1` again from the updated project folder. Saved
+recipes and settings are retained.
+
+### Uninstalling on Windows
+
+From the project folder:
+
+```powershell
+Set-ExecutionPolicy -Scope Process Bypass
+.\uninstall.ps1
+```
+
+To remove the installed program and its saved workshop data:
+
+```powershell
+.\uninstall.ps1 -Purge
+```
 
 ## Main menu
 
@@ -374,7 +504,7 @@ The standard `NO_COLOR` environment variable is also honored:
 NO_COLOR=1 cast-bullet-workshop
 ```
 
-## Updating
+## Updating on Linux or macOS
 
 From the project folder:
 
@@ -386,7 +516,7 @@ git pull
 Rerunning the installer replaces the program but does not replace saved
 recipes or settings.
 
-## Uninstalling
+## Uninstalling on Linux or macOS
 
 Remove the installed commands while retaining workshop data:
 
@@ -402,17 +532,6 @@ Remove commands and new workshop data:
 
 Legacy Bullet Lube Calculator data is not deleted by this uninstaller.
 
-On Windows:
-
-```powershell
-.\uninstall.ps1
-```
-
-or:
-
-```powershell
-.\uninstall.ps1 -Purge
-```
 
 ## Tests
 
